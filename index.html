@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mebo System — софт для Windows</title>
+<meta name="description" content="Mebo System — независимая студия разработки программ для Windows. Простые, быстрые и полезные инструменты для вашего ПК.">
+<style>
+  :root {
+    --bg: #0d1117;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #4f8cff;
+    --accent2: #6ee7b7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(13,17,23,.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: .5px; }
+  .logo span { color: var(--accent); }
+  .nav-links a { color: var(--muted); margin-left: 24px; }
+  .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+  .hero { text-align: center; padding: 90px 20px 70px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 16px; }
+  .hero h1 span { color: var(--accent); }
+  .hero p { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto 32px; }
+  .btn {
+    display: inline-block; padding: 12px 28px; border-radius: 8px;
+    font-weight: 600; margin: 0 8px 8px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: #3b7bf0; text-decoration: none; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--accent); text-decoration: none; }
+
+  section { padding: 60px 20px; }
+  section h2 { font-size: 1.8rem; margin-bottom: 24px; text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px;
+  }
+  .card h3 { margin-bottom: 8px; font-size: 1.1rem; }
+  .card .icon { font-size: 2rem; display: block; margin-bottom: 12px; }
+  .card p { color: var(--muted); font-size: .95rem; }
+
+  .values { text-align: center; }
+
+  .cta {
+    text-align: center; border-top: 1px solid var(--border);
+    background: var(--panel);
+  }
+  .cta p { color: var(--muted); margin-bottom: 24px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 20px; text-align: center; color: var(--muted); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">mebo<span>system</span></div>
+    <nav class="nav-links">
+      <a href="#products">Продукты</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Полезный софт <span>для Windows</span></h1>
+    <p>Mebo System — независимая студия разработки. Мы делаем простые, быстрые и честные программы для вашего ПК: без лишних баннеров, без телеметрии, без мусора.</p>
+    <a class="btn btn-primary" href="#products">Наши продукты</a>
+    <a class="btn btn-ghost" href="https://github.com/mebo-system" target="_blank" rel="noopener">Мы на GitHub</a>
+  </section>
+
+  <section id="products">
+    <h2>Наши продукты</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="icon">🛠</span>
+        <h3>Скоро...</h3>
+        <p>Первый продукт студии уже в разработке. Подпишитесь на GitHub, чтобы узнать о релизе первым.</p>
+      </div>
+      <!-- Шаблон карточки продукта: скопируйте блок .card и заполните
+      <div class="card">
+        <span class="icon">📦</span>
+        <h3>Название программы</h3>
+        <p>Краткое описание в одну-две строки.</p>
+        <a href="https://github.com/mebo-system/имя-репозитория">Подробнее →</a>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <section id="about" class="values">
+    <h2>Принципы Mebo System</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="icon">⚡</span>
+        <h3>Быстро и легко</h3>
+        <p>Наши программы запускаются мгновенно и не съедают память.</p>
+      </div>
+      <div class="card">
+        <span class="icon">🔒</span>
+        <h3>Без слежки</h3>
+        <p>Никакой скрытой телеметрии. Программа работает локально на вашем ПК.</p>
+      </div>
+      <div class="card">
+        <span class="icon">💬</span>
+        <h3>Открытый диалог</h3>
+        <p>Баг-репорты и предложения принимаются прямо на GitHub.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <h2>Связаться с нами</h2>
+    <p>Есть идея, нашли баг или хотите сотрудничать? Напишите нам.</p>
+    <a class="btn btn-primary" href="mailto:contact@mebosystem.com">contact@mebosystem.com</a>
+    <a class="btn btn-ghost" href="https://github.com/mebo-system" target="_blank" rel="noopener">GitHub</a>
+  </section>
+</main>
+
+<footer>
+  © 2025 Mebo System. Все программы — для Windows 10/11.
+</footer>
+
+</body>
+</html>
